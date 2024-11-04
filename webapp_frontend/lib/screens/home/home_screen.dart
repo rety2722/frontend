@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:webapp_frontend/widgets/article.dart';
+import 'package:webapp_frontend/widgets/article_v2.dart';
 import 'package:webapp_frontend/widgets/game_snippet.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -74,4 +75,8 @@ List<Article> articles = [
   const Article(),
   const Article(),
   const Article(),
+];
+
+List<ArticleWidget> articles_v2 = [
+
 ];
