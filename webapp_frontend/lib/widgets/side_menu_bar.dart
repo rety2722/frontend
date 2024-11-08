@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:webapp_frontend/screens/login/singin_page.dart';
+import 'package:webapp_frontend/widgets/buttons/sign_in_button.dart';
 import 'package:webapp_frontend/widgets/info_card.dart';
 import 'package:webapp_frontend/widgets/side_menu_tile.dart';
 
@@ -11,6 +13,9 @@ class SideMenuBar extends StatefulWidget {
 
 class _SideMenuBarState extends State<SideMenuBar> {
   SideMenuTileData selectedMenu = sideMenus.first;
+  bool isRegistered = false;
+  String name = "Full name";
+  String message = "Flutter is cool";
 
   @override
   Widget build(BuildContext context) {
@@ -23,10 +28,21 @@ class _SideMenuBarState extends State<SideMenuBar> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              InfoCard(
-                name: "Full name",
-                message: "Flutter is cool",
-              ),
+              isRegistered
+                  ? InfoCard(
+                      name: name,
+                      message: message,
+                    )
+                  : SingInButton(
+                      press: () {
+                        showGeneralDialog(
+                          barrierDismissible: true,
+                          barrierLabel: "Sing In",
+                          context: context,
+                          pageBuilder: (context, _, __) => SigninPage(),
+                        );
+                      },
+                    ),
               Padding(
                 padding: EdgeInsets.only(left: 20, top: 20, bottom: 16),
                 child: Text(

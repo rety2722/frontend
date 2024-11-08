@@ -2,7 +2,7 @@ import 'dart:math';
 
 import 'package:flutter/material.dart';
 import 'package:webapp_frontend/screens/home/home_screen.dart';
-import 'package:webapp_frontend/widgets/menu_button.dart';
+import 'package:webapp_frontend/widgets/buttons/menu_button.dart';
 import 'package:webapp_frontend/widgets/side_menu_bar.dart';
 
 class EntryPoint extends StatefulWidget {

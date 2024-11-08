@@ -78,6 +78,9 @@ doc/api/
 # dotenv environment variables file
 .env
 
+### Vscode ###
+.vscode
+
 ### Flutter ###
 # Flutter/Dart/Pub related
 **/doc/api/
